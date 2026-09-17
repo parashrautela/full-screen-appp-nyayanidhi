@@ -350,7 +350,10 @@ body { overflow: hidden; }
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 4;
+  /* reset by the chat on the left, zoom at the far right */
+  justify-content: space-between;
   align-items: center;
   gap: 8px;
   display: flex;
@@ -813,7 +816,7 @@ body { overflow: hidden; }
 
       <!-- What the graph is centred on and sized to; its controls sit in the corners -->
       <div class="world__frame" id="frame">
-        <!-- Reset and zoom, right next to the chat -->
+        <!-- Reset on the left, next to the chat; zoom on the right -->
         <div class="world__bar">
           <button type="button" class="icon-btn world__reset" id="reset" aria-label="Reset view" data-tip="Reset view" data-tip-align="start">
             <svg class="world__reset-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"></path><path d="M4.5 4.5v3.2h3.2"></path></svg>
